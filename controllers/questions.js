@@ -34,6 +34,7 @@ module.exports.addQuestion = async (req, res) => {
       if (tag) {
         console.log('splicing tag', tag)
         await tagObjectsArray.splice(i, 1)
+        i--
         tagIds.push(tag._id)
       }
     }
